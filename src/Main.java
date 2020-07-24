@@ -50,25 +50,6 @@ public class Main {
         }
 
         System.out.println("Ending Sum : " + sum.getInt());
-
-        // write output into a file
-        try{
-            if (sync == 1){
-                // output of thread synchronization
-                FileWriter fileWriter = new FileWriter("sync_output.txt");
-                fileWriter.write("Ending Sum : " + sum.getInt());
-                fileWriter.close();
-            }
-            else if (sync == 0){
-                // output without thread synchronization
-                FileWriter fileWriter = new FileWriter("normal_output.txt");
-                fileWriter.write("Ending Sum : " + sum.getInt());
-                fileWriter.close();
-            }
-
-        }catch(Exception exception){
-            System.out.println(exception);
-        }
     }
 }
 
